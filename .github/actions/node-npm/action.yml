@@ -1,0 +1,16 @@
+name: 'Node and npm'
+description: 'Setup a NodeJS environment'
+
+inputs:
+  node-version:
+    description: 'Node version to use'
+    required: true
+
+runs:
+  using: 'composite' # Mandatory parameter
+  steps:
+    # Setup a Node environment given a node version
+    - name: Use Node.js ${{ inputs.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ inputs.node-version }}

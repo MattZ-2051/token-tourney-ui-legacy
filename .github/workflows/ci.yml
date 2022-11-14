@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request: {}
+
+jobs:
+  lint_test_build:
+    runs-on: 'ubuntu-latest'
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: ./.github/actions/node-npm
+        with:
+          node-version: ${{ env.node-version }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint
+        run: npm run lint
