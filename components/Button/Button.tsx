@@ -1,6 +1,6 @@
 import { MouseEventHandler, ReactElement, useMemo } from 'react';
 import classnames from 'classnames/bind';
-import styles from './Button.module.css';
+import styles from './Button.module.scss';
 
 const cx = classnames.bind(styles);
 
