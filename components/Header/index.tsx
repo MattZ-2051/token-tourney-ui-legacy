@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useUser } from '@auth0/nextjs-auth0';
 import { useMemo } from 'react';
 import routes from 'constants/routes';
-import Logo from 'assets/images/Logo.svg';
+import Logo from 'assets/images/logo.svg';
 import Button from 'components/Button/Button';
 import HeaderLink from './HeaderLink';
 
