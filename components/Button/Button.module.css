@@ -1,0 +1,8 @@
+.button-container {
+  padding: 0.625rem 1.25rem;
+}
+
+.outlined-button {
+  border: 1px solid #fff;
+  border-radius: 100px;
+}
