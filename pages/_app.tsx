@@ -1,10 +1,13 @@
 import type { AppProps } from 'next/app';
 import { UserProvider } from '@auth0/nextjs-auth0';
+import Layout from '../components/Layout';
 import '../styles/globals.css';
 
 const App = ({ Component, pageProps }: AppProps) => (
   <UserProvider>
-    <Component {...pageProps} />
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   </UserProvider>
 );
 
