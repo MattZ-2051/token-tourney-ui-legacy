@@ -6,4 +6,10 @@ export default {
   tournaments: '/tournaments',
   marketplace: '/marketplace',
   howToPlay: '/howtoplay',
+  help: 'https://google.com',
+  winners: 'https://google.com',
+  partner: 'https://google.com',
+  contact: 'https://google.com',
+  privacy: 'https://google.com',
+  terms: 'https://google.com',
 };

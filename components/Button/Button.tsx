@@ -10,6 +10,7 @@ export interface ButtonProps {
   outlined?: boolean;
   disabled?: boolean;
   className?: string;
+  variant?: 'primary' | 'secondary';
 }
 
 const Button = ({
@@ -18,13 +19,16 @@ const Button = ({
   outlined = true,
   disabled = false,
   className = '',
+  variant = 'primary',
 }: ButtonProps) => {
   const containerClasses = useMemo(
     () =>
-      cx(`${className} ${styles.buttonContainer} text-xs`, {
+      cx(`${className} ${styles.buttonContainer} font-bold font-helvetica-bold`, {
         [styles.outlinedButton]: outlined,
+        [styles.primary]: variant === 'primary',
+        [styles.secondary]: variant === 'secondary',
       }),
-    [outlined, className]
+    [outlined, className, variant]
   );
 
   return (

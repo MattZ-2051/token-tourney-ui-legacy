@@ -7,7 +7,7 @@ import routes from 'constants/routes';
 import Logo from 'assets/images/logo.svg';
 import Button from 'components/Button/Button';
 import HeaderMenu from 'components/Header/HeaderMenu';
-import HeaderLink from './HeaderLink';
+import TokenLink from 'components/TokenLink';
 
 const headerLinks = [
   { href: routes.tournaments, label: 'Tournaments' },
@@ -31,7 +31,7 @@ const Header = () => {
           <Image src={Logo} alt="Token Tourney Logo" />
         </Link>
         {headerLinks.map(({ href, label }) => (
-          <HeaderLink href={href} label={label} key={href} />
+          <TokenLink href={href} label={label} key={href} />
         ))}
       </div>
       {isAuthenticated && (
@@ -45,12 +45,14 @@ const Header = () => {
             onClick={() => router.push(routes.login)}
             outlined={false}
             className="mr-5 uppercase font-helvetica-bold"
+            variant="secondary"
           >
             Login
           </Button>
           <Button
             onClick={() => router.push(routes.signUp)}
             className="uppercase font-helvetica-bold"
+            variant="secondary"
           >
             Sign Up
           </Button>
