@@ -12,10 +12,19 @@ export interface ButtonProps {
   className?: string;
 }
 
-const Button = ({ onClick, children, outlined = true, disabled = false, className = '' }: ButtonProps) => {
-  const containerClasses = useMemo(() =>
-    cx(`${className} ${styles.buttonContainer} text-xs`, { [styles.outlinedButton]: outlined }),
-  [outlined, className]
+const Button = ({
+  onClick,
+  children,
+  outlined = true,
+  disabled = false,
+  className = '',
+}: ButtonProps) => {
+  const containerClasses = useMemo(
+    () =>
+      cx(`${className} ${styles.buttonContainer} text-xs`, {
+        [styles.outlinedButton]: outlined,
+      }),
+    [outlined, className]
   );
 
   return (
@@ -23,6 +32,6 @@ const Button = ({ onClick, children, outlined = true, disabled = false, classNam
       {children}
     </button>
   );
-}
+};
 
 export default Button;

@@ -41,8 +41,19 @@ const Header = () => {
       )}
       {!isAuthenticated && (
         <div>
-          <Button onClick={() => router.push(routes.login)} outlined={false} className="mr-5 uppercase font-helvetica-bold">Login</Button>
-          <Button onClick={() => router.push(routes.signUp)} className="uppercase font-helvetica-bold">Sign Up</Button>
+          <Button
+            onClick={() => router.push(routes.login)}
+            outlined={false}
+            className="mr-5 uppercase font-helvetica-bold"
+          >
+            Login
+          </Button>
+          <Button
+            onClick={() => router.push(routes.signUp)}
+            className="uppercase font-helvetica-bold"
+          >
+            Sign Up
+          </Button>
         </div>
       )}
     </header>

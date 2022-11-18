@@ -6,4 +6,4 @@ export default {
   tournaments: '/tournaments',
   marketplace: '/marketplace',
   howToPlay: '/howtoplay',
-}
+};

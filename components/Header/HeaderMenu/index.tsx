@@ -12,21 +12,31 @@ const HeaderDropdown = () => {
   const userPicture = useMemo(() => user?.picture || '', [user]);
 
   const onLogout = useCallback(() => {
-    router.push(routes.logout)
+    router.push(routes.logout);
   }, [router]);
 
   return (
-    <Menu menuButton={
-      <MenuButton className="flex flex-row items-center">
-        <span className="mr-5 text-xs uppercase font-helvetica-bold">My Account</span>
-        <Image src={userPicture} width="32" height="32" alt="User Avatar" className="rounded-2xl" />
-      </MenuButton>
-    }>
+    <Menu
+      menuButton={
+        <MenuButton className="flex flex-row items-center">
+          <span className="mr-5 text-xs uppercase font-helvetica-bold">
+            My Account
+          </span>
+          <Image
+            src={userPicture}
+            width="32"
+            height="32"
+            alt="User Avatar"
+            className="rounded-2xl"
+          />
+        </MenuButton>
+      }
+    >
       <MenuItem>
         <Button onClick={onLogout}>Log Out</Button>
       </MenuItem>
     </Menu>
   );
-}
+};
 
 export default HeaderDropdown;

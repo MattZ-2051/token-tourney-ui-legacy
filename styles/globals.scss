@@ -7,21 +7,23 @@
   font-family: 'HelveticaNowDisplay';
   font-style: normal;
   font-weight: 400;
-  src: local(''), url('../assets/fonts/HelveticaNowDisplay-Regular.woff') format('woff');
+  src: local(''),
+    url('../assets/fonts/HelveticaNowDisplay-Regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'HelveticaNowDisplayBold';
   font-style: normal;
   font-weight: 700;
-  src: local(''), url('../assets/fonts/HelveticaNowDisplay-Bold.woff') format('woff');
+  src: local(''),
+    url('../assets/fonts/HelveticaNowDisplay-Bold.woff') format('woff');
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "HelveticaNowDisplay";
+  font-family: 'HelveticaNowDisplay';
   background-color: $black;
   color: $white;
 }
