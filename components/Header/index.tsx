@@ -6,12 +6,13 @@ import { useMemo } from 'react';
 import routes from 'constants/routes';
 import Logo from 'assets/images/logo.svg';
 import Button from 'components/Button/Button';
+import HeaderMenu from 'components/Header/HeaderMenu';
 import HeaderLink from './HeaderLink';
 
 const headerLinks = [
-  { href: routes.tournaments, label: 'TOURNAMENTS' },
-  { href: routes.marketplace, label: 'MARKETPLACE' },
-  { href: routes.howToPlay, label: 'HOW TO PLAY' },
+  { href: routes.tournaments, label: 'Tournaments' },
+  { href: routes.marketplace, label: 'Marketplace' },
+  { href: routes.howToPlay, label: 'How to play' },
 ];
 
 const Header = () => {
@@ -35,13 +36,13 @@ const Header = () => {
       </div>
       {isAuthenticated && (
         <div>
-          <span className="font-bold">Welcome {user?.name}!</span> <Link href={routes.logout}>Logout</Link>
+          <HeaderMenu />
         </div>
       )}
       {!isAuthenticated && (
         <div>
-          <Button onClick={() => router.push(routes.login)} outlined={false} className="mr-5">LOGIN</Button>
-          <Button onClick={() => router.push(routes.signUp)}>SIGN UP</Button>
+          <Button onClick={() => router.push(routes.login)} outlined={false} className="mr-5 uppercase font-helvetica-bold">Login</Button>
+          <Button onClick={() => router.push(routes.signUp)} className="uppercase font-helvetica-bold">Sign Up</Button>
         </div>
       )}
     </header>

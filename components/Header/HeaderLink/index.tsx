@@ -6,7 +6,7 @@ export interface HeaderLinkProps {
 }
 
 const HeaderLink = ({ href, label }: HeaderLinkProps) => (
-  <Link href={href} className="font-helvetica-bold pr-8 text-xs font-bold">
+  <Link href={href} className="font-helvetica-bold pr-8 text-xs font-bold uppercase">
     {label}
   </Link>
 );
