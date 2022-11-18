@@ -1,11 +1,10 @@
 import Link from 'next/link';
-
-export interface HeaderLinkProps {
+export interface TokenLinkProps {
   href: string;
   label: string;
 }
 
-const HeaderLink = ({ href, label }: HeaderLinkProps) => (
+const TokenLink = ({ href, label }: TokenLinkProps) => (
   <Link
     href={href}
     className="font-helvetica-bold pr-8 text-xs font-bold uppercase"
@@ -14,4 +13,4 @@ const HeaderLink = ({ href, label }: HeaderLinkProps) => (
   </Link>
 );
 
-export default HeaderLink;
+export default TokenLink;

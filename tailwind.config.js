@@ -15,6 +15,13 @@ module.exports = {
           ...defaultTheme.fontFamily.sans,
         ],
       },
+      fontSize: {
+        '3xl': ['32px', '110%'],
+      },
+      padding: {
+        8: '30px',
+        16: '60px',
+      },
     },
   },
   plugins: [],
