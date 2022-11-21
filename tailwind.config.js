@@ -14,9 +14,11 @@ module.exports = {
           'HelveticaNowDisplayBold',
           ...defaultTheme.fontFamily.sans,
         ],
+        'sonne-bold': ['SohneSchmal-Fett', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         '3xl': ['32px', '110%'],
+        '10xl': ['160px', 1],
       },
       padding: {
         8: '30px',

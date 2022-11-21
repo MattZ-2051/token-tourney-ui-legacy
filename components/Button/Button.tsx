@@ -23,11 +23,14 @@ const Button = ({
 }: ButtonProps) => {
   const containerClasses = useMemo(
     () =>
-      cx(`${className} ${styles.buttonContainer} font-bold font-helvetica-bold`, {
-        [styles.outlinedButton]: outlined,
-        [styles.primary]: variant === 'primary',
-        [styles.secondary]: variant === 'secondary',
-      }),
+      cx(
+        `${className} ${styles.buttonContainer} font-bold font-helvetica-bold`,
+        {
+          [styles.outlinedButton]: outlined,
+          [styles.primary]: variant === 'primary',
+          [styles.secondary]: variant === 'secondary',
+        }
+      ),
     [outlined, className, variant]
   );
 

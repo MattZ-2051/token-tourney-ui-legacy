@@ -19,6 +19,13 @@
     url('../assets/fonts/HelveticaNowDisplay-Bold.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'SohneSchmal-Fett';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), url('../assets/fonts/SohneSchmal-Fett.woff') format('woff');
+}
+
 html,
 body {
   padding: 0;
