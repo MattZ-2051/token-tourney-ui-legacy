@@ -24,7 +24,7 @@ const Button = ({
   const containerClasses = useMemo(
     () =>
       cx(
-        `${className} ${styles.buttonContainer} font-bold font-helvetica-bold`,
+        `${className} ${styles.buttonContainer} font-bold font-helvetica-bold hover:opacity-70`,
         {
           [styles.outlinedButton]: outlined,
           [styles.primary]: variant === 'primary',
