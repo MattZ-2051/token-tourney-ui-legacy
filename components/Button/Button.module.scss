@@ -14,9 +14,19 @@
 .primary {
   color: $black;
   background-color: $white;
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
 }
 
 .secondary {
   background-color: transparent;
   color: $white;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }

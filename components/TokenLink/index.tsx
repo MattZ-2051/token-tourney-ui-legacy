@@ -7,7 +7,7 @@ export interface TokenLinkProps {
 const TokenLink = ({ href, label }: TokenLinkProps) => (
   <Link
     href={href}
-    className="font-helvetica-bold pr-8 text-xs font-bold uppercase"
+    className="font-helvetica-bold pr-8 text-xs font-bold uppercase hover:opacity-70"
   >
     {label}
   </Link>
