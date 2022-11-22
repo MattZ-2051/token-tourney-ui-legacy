@@ -76,9 +76,21 @@ const Footer = () => {
                 </Button>
 
                 <div className="flex gap-6">
-                  <Image src={DiscordLogo} alt="Discord" />
-                  <Image src={TwitterLogo} alt="Twitter" />
-                  <Image src={InstagramLogo} alt="Instagram" />
+                  <Image
+                    src={DiscordLogo}
+                    alt="Discord"
+                    style={{ width: '24px' }}
+                  />
+                  <Image
+                    src={TwitterLogo}
+                    alt="Twitter"
+                    style={{ width: '24px' }}
+                  />
+                  <Image
+                    src={InstagramLogo}
+                    alt="Instagram"
+                    style={{ width: '24px' }}
+                  />
                 </div>
               </div>
             </div>

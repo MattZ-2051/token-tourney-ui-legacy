@@ -17,12 +17,21 @@ module.exports = {
         'sonne-bold': ['SohneSchmal-Fett', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
+        11: ['11px', '16px'],
+        13: ['13px', '19px'],
+        22: ['22px', '120%'],
         '3xl': ['32px', '110%'],
+        34: ['34px', '115%'],
+        46: ['46px', '110%'],
         '10xl': ['160px', 1],
       },
       padding: {
         8: '30px',
         16: '60px',
+        18: '70px',
+      },
+      margin: {
+        13: '50px',
       },
     },
   },
