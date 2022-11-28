@@ -11,17 +11,17 @@ const DateCountdown = ({ time }: DateCountdownProps) => {
   return (
     <Fragment>
       {timeLeft &&
-        (timeLeft.days ||
-          timeLeft.hours ||
-          timeLeft.minutes ||
-          timeLeft.seconds) && (
+        (timeLeft?.days ||
+          timeLeft?.hours ||
+          timeLeft?.minutes ||
+          timeLeft?.seconds) && (
           <Fragment>
-            {timeLeft.days > 0 && (
-              <span className="mr-1">{timeLeft.days}D</span>
+            {timeLeft?.days > 0 && (
+              <span className="mr-1">{timeLeft?.days}D</span>
             )}
-            <span className="mr-1">{timeLeft.hours}H</span>
-            <span className="mr-1">{timeLeft.minutes}M</span>
-            <span className="mr-1">{timeLeft.seconds}S</span>
+            <span className="mr-1">{timeLeft?.hours}H</span>
+            <span className="mr-1">{timeLeft?.minutes}M</span>
+            <span className="mr-1">{timeLeft?.seconds}S</span>
           </Fragment>
         )}
     </Fragment>

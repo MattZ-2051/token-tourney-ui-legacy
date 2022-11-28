@@ -12,7 +12,7 @@ type Counter = {
 };
 
 const useCountdown = (targetDate: Date | string | number) => {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetDate));
+  const [timeLeft, setTimeLeft] = useState({} as Counter);
 
   useEffect(() => {
     setTimeout(() => {
