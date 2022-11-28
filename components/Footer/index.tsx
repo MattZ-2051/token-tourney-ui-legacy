@@ -21,12 +21,12 @@ const footerLinks = [
   { href: routes.tournaments, label: 'tournaments' },
   { href: routes.marketplace, label: 'marketplace' },
   { href: routes.howToPlay, label: 'how to play' },
-  { href: routes.help, label: 'help center' },
-  { href: routes.privacy, label: `privacy policy` },
-  { href: routes.partner, label: `partner with us` },
-  { href: routes.terms, label: `terms & conditions` },
   { href: routes.winners, label: `winners’ circle` },
+  { href: routes.help, label: 'help center' },
+  { href: routes.partner, label: `partner with us` },
   { href: routes.contact, label: `contact` },
+  { href: routes.privacy, label: `privacy policy` },
+  { href: routes.terms, label: `terms & conditions` },
 ];
 
 const Footer = () => {
@@ -62,7 +62,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row relative">
             <div className="lg:w-2/6 mr-10 lg:pl-28">
               <Image src={LogoOnly} alt="Token Tourney Logo" />
-              <h2 className="pt-5 text-3xl font-bold">
+              <h2 className="pt-5 text-3xl lg:text-46 font-bold">
                 Own the <br /> competition
               </h2>
 
@@ -100,8 +100,10 @@ const Footer = () => {
                 `${styles.linksSection} grid grid-cols-2 mt-8 md:grid-cols-3 md:h-20 lg:mt-16 lg:gap-y-5`
               )}
             >
-              {footerLinks.map(({ href, label }) => (
-                <TokenLink href={href} label={label} key={label} />
+              {footerLinks.map(({ href, label }, index) => (
+                <span style={{ order: index % 3 }} key={label}>
+                  <TokenLink href={href} label={label} />
+                </span>
               ))}
             </div>
 
