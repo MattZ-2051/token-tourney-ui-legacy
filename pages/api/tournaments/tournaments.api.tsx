@@ -1,7 +1,24 @@
 import { Dispatch } from 'react';
+import { Tournament, TournamentStatus } from 'types/tournament.types';
+import { TournamentActions, Types } from 'store/reducers';
 
-export const getTournaments = (dispatch: Dispatch<unknown>) => {
-  dispatch({ type: 'ADD_TOURNAMENT', payload: mockData });
+export const getTournaments = (
+  dispatch: Dispatch<TournamentActions>,
+  status?: TournamentStatus
+) => {
+  dispatch({
+    type: Types.AddTournament,
+    payload: mockData.filter((item) => item.status === status) as Tournament[],
+  });
+};
+
+export const getFeaturedTournaments = (
+  dispatch: Dispatch<TournamentActions>
+) => {
+  dispatch({
+    type: Types.AddFeatured,
+    payload: mockData as Tournament[],
+  });
 };
 
 const mockData = [
