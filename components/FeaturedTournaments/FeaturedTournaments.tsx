@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { useRouter } from 'next/router';
-import Button from 'components/Button/Button';
+import Button from 'components/Button';
 import routes from 'constants/routes';
 import Tile from 'components/Tile/Tile';
 import { BLUE_COLOR, RED_COLOR } from 'constants/variables';

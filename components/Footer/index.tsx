@@ -9,7 +9,7 @@ import InstagramLogo from 'assets/images/instagram.svg';
 import InfiniteWorldLogo from 'assets/images/infiniteworld.svg';
 import Logo from 'assets/images/logo.svg';
 import TokenTourneyLogo from 'assets/images/symbol.png';
-import Button from 'components/Button/Button';
+import Button from 'components/Button';
 import routes from 'constants/routes';
 import TokenLink from 'components/TokenLink';
 import Marquee from 'components/Marquee';
