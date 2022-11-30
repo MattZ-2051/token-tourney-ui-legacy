@@ -6,7 +6,7 @@ import styles from './Layout.module.scss';
 
 const Layout = ({ children }: { children: ReactElement }) => (
   <Fragment>
-    <div className={styles.layoutContainer}>
+    <div className={`container mx-auto px-4 ${styles.layoutContainer}`}>
       <Head>
         <title>Token Tourney</title>
         <meta name="description" content="Token Tourney" />

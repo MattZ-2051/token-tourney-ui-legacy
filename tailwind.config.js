@@ -7,6 +7,9 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       fontFamily: {
         helvetica: ['HelveticaNowDisplay', ...defaultTheme.fontFamily.sans],
@@ -23,6 +26,8 @@ module.exports = {
         '3xl': ['32px', '110%'],
         34: ['34px', '115%'],
         46: ['46px', '110%'],
+        70: ['70px', '100%'],
+        120: ['120px', '90%'],
         '10xl': ['160px', 1],
       },
       padding: {
@@ -34,6 +39,7 @@ module.exports = {
       },
       margin: {
         13: '50px',
+        18: '70px',
       },
     },
   },

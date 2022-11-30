@@ -49,7 +49,7 @@ const FeaturedTournaments = ({
 
       <section>
         <div className="relative mx-auto my-0" style={{ width: '100%' }}>
-          <div className="flex flex-col md:flex-row flex-wrap justify-between">
+          <div className="flex flex-col md:flex-row flex-wrap justify-between items-center">
             {tournaments.map((item: Tournament) => (
               <Tile {...item} key={item.id} />
             ))}

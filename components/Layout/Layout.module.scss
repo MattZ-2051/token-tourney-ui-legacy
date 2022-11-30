@@ -1,5 +1,7 @@
 .layout-container {
-  padding: 0 6.875rem;
+  @media (min-width: 1513px) {
+    padding: 0 6.875rem;
+  }
 
   @media screen and (max-width: 1024px) {
     padding: 0 2.5rem;

@@ -2,9 +2,9 @@ import Carousel from 'components/Carousel';
 import { CarouselItem } from 'components/Carousel/types';
 import FeaturedTournaments from 'components/FeaturedTournaments/FeaturedTournaments';
 import { featuredTournamentsTexts } from 'constants/variables';
-import { TournamentContext } from 'contexts/TournamentContext';
+import { AppContext } from 'store/context';
 import { useContext, useEffect } from 'react';
-import { getTournaments } from './api/tournaments/tournaments.api';
+import { getFeaturedTournaments } from './api/tournaments/tournaments.api';
 
 import stepOne from '../assets/images/landing-step-1.png';
 import stepTwo from '../assets/images/landing-step-2.png';
@@ -35,20 +35,25 @@ const carouselItems: CarouselItem = {
 
 const Home = () => {
   const { upcoming, active } = featuredTournamentsTexts;
-  const { state, dispatch } = useContext(TournamentContext);
+  const {
+    state: {
+      tournaments: { featuredTournaments },
+    },
+    dispatch,
+  } = useContext(AppContext);
 
   useEffect(() => {
-    if (!state.tournaments.length) {
-      getTournaments(dispatch);
+    if (!featuredTournaments.length) {
+      getFeaturedTournaments(dispatch);
     }
-  });
+  }, []);
 
   return (
     <>
       <Carousel carouselItems={carouselItems} />
       <div className="divide-y md:divide-y-0 divide-gray-700">
         <FeaturedTournaments
-          tournaments={state?.tournaments.filter(
+          tournaments={featuredTournaments?.filter(
             (item) => item.status === 'upcoming'
           )}
           buttonText={upcoming.buttonText}
@@ -57,7 +62,7 @@ const Home = () => {
           status="upcoming"
         />
         <FeaturedTournaments
-          tournaments={state?.tournaments.filter(
+          tournaments={featuredTournaments?.filter(
             (item) => item.status === 'active'
           )}
           buttonText={active.buttonText}
