@@ -25,11 +25,11 @@ const Carousel: FC<IProps> = ({ carouselItems }): JSX.Element => {
     }
     const newTimeout = window.setTimeout(handleIndex, 8000);
     setExistingTimeout(newTimeout);
-    animationReset('progressBar');
   }, [selectedIndex]);
 
   const handleClick = (index: number): void => {
     setSelectedIndex(index);
+    animationReset('progressBar');
   };
 
   return carouselItems ? (
